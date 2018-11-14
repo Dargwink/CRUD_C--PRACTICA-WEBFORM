@@ -10,5 +10,14 @@ namespace CRUDSystem.Models
 {
     class MyDBContext : DbContext
     {
+        public MyDBContext() : base("")
+        {
+
+        }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }
