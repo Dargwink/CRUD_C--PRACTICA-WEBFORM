@@ -23,9 +23,9 @@ namespace CRUDSystem.Migrations
 
             IList<Detail> defaultDetail = new List<Detail>();
 
-            defaultDetail.Add(new Detail() { Fname = "Harry1", Address = "Secret Address1 ", Age = 20,DOB = DateTime.Now });
-            defaultDetail.Add(new Detail() { Fname = "Harry2", Address = "Secret Address2 ",Age = 21, DOB = DateTime.Now});
-            defaultDetail.Add(new Detail() { Fname = "Harry3", Address = "Secret Address3 " , Age = 22, DOB = DateTime.Now});
+            defaultDetail.Add(new Detail() { Fname = "Harry1", Lname = "Secre 1t" , Address = "Secret Address1 ", Age = 20, DOB = DateTime.Now });
+            defaultDetail.Add(new Detail() { Fname = "Harry2", Lname = "Secre 2t", Address = "Secret Address2 ", Age = 21, DOB = DateTime.Now });
+            defaultDetail.Add(new Detail() { Fname = "Harry3", Lname = "Secre 3t", Address = "Secret Address3 ", Age = 22, DOB = DateTime.Now });
 
             foreach (Detail std in defaultDetail)
                 context.Details.Add(std);
