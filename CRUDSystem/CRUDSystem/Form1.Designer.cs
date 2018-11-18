@@ -39,9 +39,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtAddres = new System.Windows.Forms.TextBox();
-            this.textAge = new System.Windows.Forms.TextBox();
+            this.txtAge = new System.Windows.Forms.TextBox();
             this.txtLName = new System.Windows.Forms.TextBox();
-            this.txtName = new System.Windows.Forms.TextBox();
+            this.txtFName = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -79,6 +79,7 @@
             this.btnSave.TabIndex = 17;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // dtDOB
             // 
@@ -139,12 +140,13 @@
             this.txtAddres.Size = new System.Drawing.Size(100, 20);
             this.txtAddres.TabIndex = 5;
             // 
-            // textAge
+            // txtAge
             // 
-            this.textAge.Location = new System.Drawing.Point(85, 126);
-            this.textAge.Name = "textAge";
-            this.textAge.Size = new System.Drawing.Size(100, 20);
-            this.textAge.TabIndex = 6;
+            this.txtAge.Location = new System.Drawing.Point(85, 126);
+            this.txtAge.Name = "txtAge";
+            this.txtAge.Size = new System.Drawing.Size(100, 20);
+            this.txtAge.TabIndex = 6;
+            this.txtAge.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAge_KeyPress);
             // 
             // txtLName
             // 
@@ -153,12 +155,13 @@
             this.txtLName.Size = new System.Drawing.Size(100, 20);
             this.txtLName.TabIndex = 7;
             // 
-            // txtName
+            // txtFName
             // 
-            this.txtName.Location = new System.Drawing.Point(85, 39);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(100, 20);
-            this.txtName.TabIndex = 8;
+            this.txtFName.Location = new System.Drawing.Point(85, 39);
+            this.txtFName.Name = "txtFName";
+            this.txtFName.Size = new System.Drawing.Size(100, 20);
+            this.txtFName.TabIndex = 8;
+            this.txtFName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFName_KeyPress);
             // 
             // Form1
             // 
@@ -176,11 +179,12 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtAddres);
-            this.Controls.Add(this.textAge);
+            this.Controls.Add(this.txtAge);
             this.Controls.Add(this.txtLName);
-            this.Controls.Add(this.txtName);
+            this.Controls.Add(this.txtFName);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -200,9 +204,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtAddres;
-        private System.Windows.Forms.TextBox textAge;
+        private System.Windows.Forms.TextBox txtAge;
         private System.Windows.Forms.TextBox txtLName;
-        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.TextBox txtFName;
     }
 }
 

@@ -65,9 +65,9 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201811180340593_initialize.cs" />
-    <Compile Include="Migrations\201811180340593_initialize.Designer.cs">
-      <DependentUpon>201811180340593_initialize.cs</DependentUpon>
+    <Compile Include="Migrations\201811181729569_initializeDB.cs" />
+    <Compile Include="Migrations\201811181729569_initializeDB.Designer.cs">
+      <DependentUpon>201811181729569_initializeDB.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Detail.cs" />
@@ -77,8 +77,8 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201811180340593_initialize.resx">
-      <DependentUpon>201811180340593_initialize.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201811181729569_initializeDB.resx">
+      <DependentUpon>201811181729569_initializeDB.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

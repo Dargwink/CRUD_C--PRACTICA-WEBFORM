@@ -7,13 +7,13 @@ namespace CRUDSystem.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class initialize : IMigrationMetadata
+    public sealed partial class initializeDB : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(initialize));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(initializeDB));
         
         string IMigrationMetadata.Id
         {
-            get { return "201811180340593_initialize"; }
+            get { return "201811181729569_initializeDB"; }
         }
         
         string IMigrationMetadata.Source
