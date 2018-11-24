@@ -7,13 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-//using CRUDSystem.Entities;
+using CRUDSystem.Entities;
 
 namespace CRUDSystem
 {
     public partial class Form1 : Form
     {
-        //Details MyDetail = new Details();
+        Details MyDetail = new Details();
         public Form1()
         {
             InitializeComponent();
@@ -26,27 +26,27 @@ namespace CRUDSystem
 
         private void PopGridView()
         {
-            //using (var MyModelEntities = new MyModel())
-            //{
-            //    dataGridView1.DataSource = MyModelEntities.Details.ToList<Details>();
-            //}
+            using (var MyModelEntities = new MyModel())
+            {
+                dataGridView1.DataSource = MyModelEntities.Details.ToList<Details>();
+            }
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            //MyDetail.Fname = txtFName.Text;
-            //MyDetail.Lname = txtLName.Text;
-            //MyDetail.Age = Convert.ToInt32(txtAge.Text);
-            //MyDetail.Address = txtAddres.Text;
-            //MyDetail.DOB = Convert.ToDateTime(dtDOB.Text);
+            MyDetail.Fname = txtFName.Text;
+            MyDetail.Lname = txtLName.Text;
+            MyDetail.Age = Convert.ToInt32(txtAge.Text);
+            MyDetail.Address = txtAddres.Text;
+            MyDetail.DOB = Convert.ToDateTime(dtDOB.Text);
 
-            //   using (var MyDbEntities = new MyModel())
-            //   {
-            //    MyDbEntities.Details.Add(MyDetail);
-            //    MyDbEntities.SaveChanges();
-            //   }
+            using (var MyDbEntities = new MyModel())
+            {
+                MyDbEntities.Details.Add(MyDetail);
+                MyDbEntities.SaveChanges();
+            }
 
-            //PopGridView();
+            PopGridView();
         }
 
         private void txtAge_KeyPress(object sender, KeyPressEventArgs e)
