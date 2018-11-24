@@ -15,7 +15,7 @@ namespace CRUDSystem.Models
         }
 
         
-          //public DbSet<Detail> Details { get; set; }
+          public DbSet<Detail> Details { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
