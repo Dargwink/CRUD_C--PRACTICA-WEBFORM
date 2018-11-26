@@ -88,5 +88,10 @@ namespace CRUDSystem
                 e.Handled = true;
             }
         }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+           
+        }
     }
 }
