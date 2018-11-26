@@ -42,8 +42,21 @@ namespace CRUDSystem
 
             using (var MyDbEntities = new MyModel())
             {
-                MyDbEntities.Details.Add(MyDetail);
-                MyDbEntities.SaveChanges();
+                if (MyDetail.ID == 0)
+                {
+                    MyDbEntities.Details.Add(MyDetail);
+                    MyDbEntities.SaveChanges();
+                }
+
+                else
+                {
+                    MyDbEntities.Entry(MyDetail).State = System.Data.Entity.EntityState.Modified;
+                    MyDbEntities.SaveChanges();
+
+                    btnSave.Text = "Save";
+                }
+
+                
             }
 
             PopGridView();
@@ -91,7 +104,42 @@ namespace CRUDSystem
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-           
+            //MyDetail.Fname = txtFName.Text;
+            //MyDetail.Lname = txtLName.Text;
+            //MyDetail.Age = Convert.ToInt32(txtAge.Text);
+            //MyDetail.Address = txtAddres.Text;
+            //MyDetail.DOB = Convert.ToDateTime(dtDOB.Text);
+
+            //using (var MyDbEntities = new MyModel())
+            //{
+                
+            //}
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            /*Usamos currentRow para referirnos a una sola fila */
+            if (dataGridView1.CurrentRow.Index != -1)
+            {
+                MyDetail.ID = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+                using (var MyDBEntities = new MyModel())
+                {
+                    MyDetail = MyDBEntities.Details.Where(x => x.ID == MyDetail.ID).FirstOrDefault();
+                    txtFName.Text = MyDetail.Fname;
+                    txtLName.Text = MyDetail.Lname;
+                    txtAge.Text = MyDetail.Age.ToString();
+                    txtAddres.Text = MyDetail.Address;
+                    dtDOB.Text = MyDetail.DOB.ToString();
+
+                    btnSave.Text = "Update";
+
+                }
+            }
         }
     }
 }
